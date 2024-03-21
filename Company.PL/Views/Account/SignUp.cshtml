@@ -1,0 +1,87 @@
+﻿@model SignUpViewModel
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+<div class="main-agileinfo">
+    <div class="agileits-top">
+        <form asp-action="SignUp">
+            <div asp-validation-summary="All"></div>
+@*             <input class="text w3lpass " asp-for="FName" placeholder="First Name" required="">
+            <span asp-validation-for="FName" class="text-danger"></span>
+            <input class="text w3lpass " asp-for="LName" placeholder="Last Name" required="">
+            <span asp-validation-for="LName" class="text-danger"></span>
+            <input class="text w3lpass " asp-for="UserName" placeholder="Username" required="">
+            <span asp-validation-for="UserName" class="text-danger"></span> *@
+
+            <input class="text eamil w3lpass" asp-for="Email" placeholder="Email" required="">
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <input class="text w3lpass" asp-for="Password" placeholder="Password" required="">
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input class="text w3lpass" asp-for="ConfirmPassword" placeholder="Confirm Password" required="">
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            <div class="wthree-text">
+                <label class="anim">
+                    <input style="background:  #D6A2E8 !important; border: 1px solid #D6A2E8 !important;" asp-for="IsAgree" class="checkbox" required="">
+                    <span>I Agree To The Terms & Conditions</span>
+                </label>
+                <div class="clear"> </div>
+            </div>
+            <input style="background:  #D6A2E8 !important;  border: 1px solid #D6A2E8 !important;" type="submit" value="SIGNUP">
+        </form>
+        <p style="background-color:transparent">Do You have an Account? <a asp-action="Login"> Login Now!</a></p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* 
+<div class="container">
+    <div class="signup-content">
+        <form  asp-action="SignUp">
+            <h2 class="form-title">Create account</h2>
+            <div class="form-group">
+                <input type="text" class="form-input" name="name" id="name" placeholder="Your Name" />
+            </div>
+
+            <div class="form-group">
+                <input type="email" class="form-input" asp-for="@Model.Email" placeholder="Your Email" required="" />
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-input" asp-for="@Model.Password" placeholder="Password" required="" />
+                <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-input" asp-for="@Model.ConfirmPassword" placeholder="Repeat your password" required="" />
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox"  asp-for="IsAgree" class="agree-term" required="" />
+                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label> 
+            </div>
+
+            <div class="form-group">
+                <input type="submit"   name="submit" id="submit"  class="form-submit" value="Sign up" />
+            </div>
+        </form>
+
+        <p class="loginhere">
+            Have already an account ? <a asp-action="Login" class="loginhere-link">Login here</a>
+        </p>
+    </div>
+</div>
+ 
+
+ *@

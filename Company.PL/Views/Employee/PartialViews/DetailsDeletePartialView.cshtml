@@ -1,0 +1,65 @@
+﻿@model EmployeeViewModel
+@{
+
+	var Departments = new SelectList(ViewBag.Departments, "Id", "Name");
+}
+
+
+
+<div class="mb-3">
+	<label asp-for="@Model.Name"></label>
+	<input asp-for="@Model.Name" class="form-control" readonly />
+	
+
+</div>
+
+<div class="mb-3">
+	<label asp-for="@Model.Address"></label>
+	<input asp-for="@Model.Address" class="form-control" readonly />
+	
+
+</div>
+
+<div class="mb-3">
+	<label asp-for="@Model.Salary"></label>
+	<input asp-for="@Model.Salary" class="form-control" readonly />
+	
+
+</div>
+
+<div class="mb-3">
+	<label asp-for="@Model.Email"></label>
+	<input asp-for="@Model.Email" class="form-control" readonly />
+
+
+</div>
+
+<div class="mb-3">
+	<label asp-for="@Model.HireDate"></label>
+	<input type="date" asp-for="@Model.HireDate" class="form-control" readonly />
+
+
+</div>
+
+<div class="mb-3">
+	<label asp-for="@Model.DepartmentId" class="col form-label"></label>
+	<select asp-for="@Model.DepartmentId" asp-items="Departments" class="form-control" readonly>
+		<option>---Select Department---</option>
+	</select>
+	<span asp-validation-for="@Model.DepartmentId" class="text-danger"></span>
+
+</div>
+
+<div class="form-group form-check" readonly>
+	<label asp-for="@Model.IsActive" class="form-check-label"></label>
+	<input asp-for="@Model.IsActive" type="checkbox" class="form-check-input" readonly />
+
+</div>
+
+
+
+<div>
+	<img src="~/Files/Images/@Model.ImageUrl" class="img-fluid rounded-circle" width="75" />
+</div>
+
+
